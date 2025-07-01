@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Spin - Win Amazing Prizes</title>
+    <meta name="description" content="Test your luck and win amazing prizes in our exclusive spin-to-win experience!">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Home Page -->
+    <div id="home-page" class="page active">
+        <div class="container">
+            <!-- Hero Section -->
+            <div class="hero-section">
+                <div class="hero-header">
+                    <span class="sparkle">✨</span>
+                    <h1 class="hero-title">Lucky Spin</h1>
+                    <span class="sparkle">✨</span>
+                </div>
+                
+                <div class="hero-content">
+                    <div class="badge">Supported by Elon Musk & TPS-Studio</div>
+                    <p class="hero-description">
+                        Test your luck and win amazing prizes in our exclusive spin-to-win experience!
+                    </p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎁</div>
+                        <h3>Guaranteed Prizes</h3>
+                        <p>Every spin wins something amazing!</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏆</div>
+                        <h3>Exclusive Access</h3>
+                        <p>Limited to valid ticket holders only</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⭐</div>
+                        <h3>Premium Experience</h3>
+                        <p>Backed by industry leaders</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Winners Section -->
+            <div class="winners-section">
+                <h2 class="winners-title">🏆 Last Month's Lucky Winners</h2>
+                <div class="winners-grid">
+                    <div class="winner-card">
+                        <div class="winner-avatar">
+                           <img src="css/image/win10.jpg" alt="">
+                        </div>
+                        <h3>Sarah Johnson</h3>
+                        <div class="winner-prize">$500k Cash</div>
+                    </div>
+                    <div class="winner-card">
+                        <div class="winner-avatar">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" alt="Mike Chen">
+                        </div>
+                        <h3>Mike Chen</h3>
+                        <div class="winner-prize">$1m 200k Cash</div>
+                    </div>
+                    <div class="winner-card">
+                        <div class="winner-avatar">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face" alt="Emma Rodriguez">
+                        </div>
+                        <h3>Emma Rodriguez</h3>
+                        <div class="winner-prize">$250k Cash</div>
+                    </div>
+                    <div class="winner-card">
+                        <div class="winner-avatar">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face" alt="David Park">
+                        </div>
+                        <h3>David Park</h3>
+                        <div class="winner-prize">Tesla Merchandise</div>
+                    </div>
+                          <div class="winner-card">
+                        <div class="winner-avatar">
+                           <img src="css/image/win3.jpg" alt="">
+                        </div>
+                        <h3>George</h3>
+                        <div class="winner-prize">$1.5m Cash</div>
+                    </div>
+                          <div class="winner-card">
+                        <div class="winner-avatar">
+                           <img src="css/image/win2.jpg" alt="">
+                        </div>
+                        <h3>Bob</h3>
+                        <div class="winner-prize">$700k Cash</div>
+                    </div>
+                          <div class="winner-card">
+                        <div class="winner-avatar">
+                           <img src="css/image/win4.jpg" alt="">
+                        </div>
+                        <h3>Diana</h3>
+                        <div class="winner-prize">$250k Cash</div>
+                    </div>
+                          <div class="winner-card">
+                        <div class="winner-avatar">
+                           <img src="css/image/win5.jpg" alt="">
+                        </div>
+                        <h3>Alice</h3>
+                        <div class="winner-prize">$250k Cash</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ticket Entry Section -->
+            <div class="ticket-section">
+                <div class="ticket-card">
+                    <div class="ticket-header">
+                        <h3>Ready to Spin?</h3>
+                        <p>Enter your exclusive Ticket ID to begin</p>
+                    </div>
+                    
+                    <div class="ticket-form">
+                        <input type="text" id="ticket-input" placeholder="Enter your Ticket ID" class="ticket-input">
+                        <button onclick="validateTicket()" class="btn-primary">Start Your Lucky Journey ✨</button>
+                    </div>
+                    
+                    <div class="ticket-note">
+                        <p>Don't have a ticket? Contact TPS-Studio for exclusive access.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form Page -->
+    <div id="form-page" class="page">
+        <div class="container">
+            <button onclick="goToHome()" class="back-btn">← Back to Home</button>
+            
+            <div class="form-container">
+                <div class="form-card">
+                    <div class="form-header">
+                        <h2>Registration Form</h2>
+                        <p>Just a few details to get you spinning!</p>
+                        <div class="ticket-display">
+                            <p>Ticket ID: <span id="current-ticket"></span></p>
+                        </div>
+                    </div>
+                    
+                    <div class="form-content">
+                        <div class="form-group">
+                            <label for="full-name">👤 Full Name</label>
+                            <input type="text" id="full-name" placeholder="Enter your full name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">📧 Email Address</label>
+                            <input type="email" id="email" placeholder="Enter your email address" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">📞 Phone Number</label>
+                            <input type="tel" id="phone" placeholder="Enter your phone number" required>
+                        </div>
+
+                        <button onclick="submitForm()" class="btn-primary">Continue to Spin 🎯</button>
+
+                        <div class="form-note">
+                            <p>Your information is secure and will only be used for prize delivery.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Spin Page -->
+    <div id="spin-page" class="page">
+        <div class="container">
+            <button onclick="goToForm()" class="back-btn">← Back to Form</button>
+            
+            <div class="spin-header">
+                <h1>🎯 Lucky Spin Wheel</h1>
+                <p>Welcome <span id="user-name"></span>! Ready to discover your prize?</p>
+            </div>
+
+            <div class="spin-container">
+                <!-- Spin Wheel -->
+                <div class="wheel-container">
+                    <div class="wheel-wrapper">
+                        <div id="wheel" class="wheel">
+                            <div class="wheel-segment segment-1">
+                                <div class="segment-content">💵<br>$250k<br>Cash</div>
+                            </div>
+                            <div class="wheel-segment segment-2">
+                                <div class="segment-content">💵<br>$350k<br>Cash</div>
+                            </div>
+                            <div class="wheel-segment segment-3">
+                                <div class="segment-content">💵<br>$500k<br>Cash</div>
+                            </div>
+                            <div class="wheel-segment segment-4">
+                                <div class="segment-content">💵<br>$700k <br>Cash</div>
+                            </div>
+                            <div class="wheel-segment segment-5">
+                                <div class="segment-content">💵<br>$1.5m<br>Cash</div>
+                            </div>
+                            <div class="wheel-segment segment-6">
+                                <div class="segment-content">💵<br>$5m<br>Cash</div>
+                            </div>
+                            <div class="wheel-segment segment-7">
+                                <div class="segment-content">💵<br>$100k<br>Cash</div>
+                            </div>
+                            <div class="wheel-segment segment-8">
+                                <div class="segment-content">💵<br>$1m <br>Cash</div>
+                            </div>
+                        </div>
+                        <div class="wheel-center">✨</div>
+                        <div class="wheel-pointer"></div>
+                    </div>
+
+                    <div class="spin-controls">
+                        <button id="spin-btn" onclick="spinWheel()" class="btn-spin">🏆 SPIN NOW!</button>
+                        <button id="reset-btn" onclick="resetSpin()" class="btn-reset" style="display: none;">🔄 Spin Again?</button>
+                    </div>
+                </div>
+
+                <!-- User Info & Prize Display -->
+                <div class="info-section">
+                    <div class="user-info-card">
+                        <h3>🎁 Participant Details</h3>
+                        <div class="user-details">
+                            <p><strong>Name:</strong> <span id="display-name"></span></p>
+                            <p><strong>Email:</strong> <span id="display-email"></span></p>
+                            <p><strong>Phone:</strong> <span id="display-phone"></span></p>
+                            <p><strong>Ticket:</strong> <span id="display-ticket"></span></p>
+                        </div>
+                    </div>
+
+                    <div id="prize-card" class="prize-card" style="display: none;">
+                        <h3>🎉 CONGRATULATIONS! 🎉</h3>
+                        <div class="prize-content">
+                            <div class="prize-text">You Won:</div>
+                            <div id="prize-name" class="prize-name"></div>
+                            <div class="prize-note">
+                                <p>A TPS-Studio representative will contact you within 24 hours to arrange prize delivery.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="instructions-card" class="instructions-card">
+                        <h3>How it works:</h3>
+                        <ul>
+                            <li>• Click "SPIN NOW!" to start the wheel</li>
+                            <li>• Every spin is guaranteed to win a prize</li>
+                            <li>• Your prize will be delivered within 5-7 days</li>
+                            <li>• Good luck and have fun! 🍀</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
